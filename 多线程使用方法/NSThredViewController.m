@@ -14,6 +14,8 @@
      NSThread *_thread2;
      NSThread *_thread3;
     NSInteger _count;
+    
+    UIImageView *_iconImage;
 }
 @end
 
@@ -32,11 +34,14 @@
     _thread3 = [[NSThread alloc]initWithTarget:self selector:@selector(saleTick) object:nil];
     _thread3.name = @"3号窗口";
     
+    _iconImage = [[UIImageView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:_iconImage];
 }
 
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
   
+    // 设置下载
     [self performSelectorInBackground:@selector(downImgUrl) withObject:nil];
     
     /*
@@ -48,7 +53,19 @@
 }
 #warning  -----------  线程之间的通讯
 - (void)downImgUrl{
-    NSString *imgUrl = @"";
+    NSLog(@"%@_____",[NSThread currentThread]);
+    NSString *imgUrl = @"http://img.sootuu.com/vector/200801/072/0337.jpg";
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]];
+    //返回主线程刷新UI; YES为是否同时执行当前线程
+    [self performSelectorOnMainThread:@selector(onThread:) withObject:image waitUntilDone:YES];
+    
+    //[self performSelector:@selector(onThread:) onThread:[NSThread mainThread] withObject:image waitUntilDone:YES];
+   // [_iconImage performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:YES];
+}
+
+- (void)onThread:(UIImage*)image{
+     NSLog(@"___________%@_____",[NSThread currentThread]);
+    _iconImage.image = image;
 }
 
 
