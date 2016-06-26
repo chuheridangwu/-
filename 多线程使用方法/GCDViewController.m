@@ -29,12 +29,24 @@
 }
 #warning -------- 合并两张图片
 - (void)mergeImage{
-    //异步下载
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    
+    //队列组
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue =dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    //使用队列组下载图片
+    __block UIImage *image1 = nil;
+    dispatch_group_async(group, queue, ^{
+        image1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ww2.sinaimg.cn/large/5de69ad1jw1evh5fihaxqj21jk0yqwxl.jpg"]]];
+    });
+    __block UIImage *image2 = nil;
+    dispatch_group_async(group, queue, ^{
         //下载图片
-        UIImage *image1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ww2.sinaimg.cn/large/5de69ad1jw1evh5fihaxqj21jk0yqwxl.jpg"]]];
-        UIImage *image2 = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://pic8.nipic.com/20100705/636809_145722082776_2.jpg"]]];
-        
+        image2 = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://pic8.nipic.com/20100705/636809_145722082776_2.jpg"]]];
+    });
+    
+    //队列组的任务都执行结束后 调用此方法
+    dispatch_group_notify(group, queue, ^{
         //2.合并图片
         //2.1 开启上下文
         UIGraphicsBeginImageContextWithOptions(image1.size, NO, 0.0);
@@ -233,6 +245,17 @@ dispatch_sync  :同步，不具有开辟线程的能力
      2.dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             NSLog(@"------ download -------");
        });
+
+//队列组
+    dispatch_group_t group = dispatch_group_create();
+//使用队列组创建任务
+    dispatch_group_async(group, queue, ^{
+       image1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ww2.sinaimg.cn/large/5de69ad1jw1evh5fihaxqj21jk0yqwxl.jpg"]]];
+    });
+//队列组的任务都执行结束后 调用此方法
+    dispatch_group_notify(group, queue, ^{
+ 
+   }
  
 */
 
