@@ -25,24 +25,50 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self gcdTimeDelay];
+}
+
+#warning  --- GCD 延时调用 不会卡主线程
+- (void)gcdTimeDelay{
+    NSLog(@"-----began------");
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    //也可以放在子线程执行
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), queue, ^{
+        NSLog(@"------ download -------");
+    });
+    NSLog(@"-----end------");
+
+}
+
+- (void)TimeDelay{
+     NSLog(@"-----began------");
+    [self performSelector:@selector(download:) withObject:@"http://a.jpg" afterDelay:3];
+     NSLog(@"-----end------");
+}
+
+- (void)download:(NSString*)url{
+    NSLog(@"%@------download",url);
+}
+
+#warning  ----------  GCD 线程之间的通信
+- (void)asyncCommunication{
     //获取全局并发队列
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     //获取主队列
     dispatch_queue_t queueMain = dispatch_get_main_queue();
     
-   dispatch_async(queue, ^{
-       NSString *imgUrl = @"http://img.sootuu.com/vector/200801/072/0337.jpg";
-       UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]];
-       
-       //回到主线程设置照片
-       dispatch_async(queueMain, ^{
-           _iconImage.image = image;
-       });
-   });
+    dispatch_async(queue, ^{
+        NSString *imgUrl = @"http://img.sootuu.com/vector/200801/072/0337.jpg";
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]];
+        
+        //回到主线程设置照片
+        dispatch_async(queueMain, ^{
+            _iconImage.image = image;
+        });
+    });
 }
-
-#warning  ----------  GCD 线程之间的通信
-
 
 #warning  ----------  GCD 使用方法
 //异步 -- 主队列中执行（主队列是串行）
@@ -168,6 +194,12 @@ dispatch_sync  :同步，不具有开辟线程的能力
  
 //获取全局并发队列
    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+ 
+//GCD 延时调用download:方法  不会卡主线程
+     1.[self performSelector:@selector(download:) withObject:@"http://a.jpg" afterDelay:3];
+     2.dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"------ download -------");
+       });
  
 */
 
