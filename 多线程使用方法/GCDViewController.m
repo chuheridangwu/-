@@ -25,8 +25,34 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self GCDOne];
+    [self mergeImage];
 }
+#warning -------- 合并两张图片
+- (void)mergeImage{
+    //异步下载
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //下载图片
+        UIImage *image1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ww2.sinaimg.cn/large/5de69ad1jw1evh5fihaxqj21jk0yqwxl.jpg"]]];
+        UIImage *image2 = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://pic8.nipic.com/20100705/636809_145722082776_2.jpg"]]];
+        
+        //2.合并图片
+        //2.1 开启上下文
+        UIGraphicsBeginImageContextWithOptions(image1.size, NO, 0.0);
+        //2.2 绘制图片
+        [image1 drawAsPatternInRect:CGRectMake(0, 0, image1.size.width, image1.size.height)];
+        [image2 drawAsPatternInRect:CGRectMake(100,image1.size.height - 200, image2.size.width, 180)];
+        //2.3 得到上下文的图片
+        UIImage *fullImage = UIGraphicsGetImageFromCurrentImageContext();
+        //2.4 结束上下文
+        UIGraphicsEndImageContext();
+        
+        //3.返回主线程显示图片
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _iconImage.image = fullImage;
+        });
+    });
+}
+
 #warning  --- GCD 代码只执行一次
 - (void)GCDOne{
     static dispatch_once_t onceToken;
