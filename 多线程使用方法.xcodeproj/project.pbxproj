@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2A883DC1D1FA2620000AC68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A883DB1D1FA2620000AC68 /* main.m */; };
+		A2A883DF1D1FA2620000AC68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A883DE1D1FA2620000AC68 /* AppDelegate.m */; };
+		A2A883E21D1FA2620000AC68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A883E11D1FA2620000AC68 /* ViewController.m */; };
+		A2A883E51D1FA2620000AC68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A883E31D1FA2620000AC68 /* Main.storyboard */; };
+		A2A883E71D1FA2620000AC68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A883E61D1FA2620000AC68 /* Assets.xcassets */; };
+		A2A883EA1D1FA2620000AC68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A883E81D1FA2620000AC68 /* LaunchScreen.storyboard */; };
+		A2A883F51D1FA2630000AC68 /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A883F41D1FA2630000AC68 /* _______Tests.m */; };
+		A2A884001D1FA2630000AC68 /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A883FF1D1FA2630000AC68 /* _______UITests.m */; };
+		A2A8840F1D1FA2AF0000AC68 /* NSThredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A8840E1D1FA2AF0000AC68 /* NSThredViewController.m */; };
+		A2A884141D1FA3330000AC68 /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A884131D1FA3330000AC68 /* GCDViewController.m */; };
+		A2A884181D1FA3650000AC68 /* NSOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A884171D1FA3650000AC68 /* NSOperationViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2A883F11D1FA2630000AC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2A883CF1D1FA2620000AC68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2A883D61D1FA2620000AC68;
+			remoteInfo = "多线程使用方法";
+		};
+		A2A883FC1D1FA2630000AC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2A883CF1D1FA2620000AC68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2A883D61D1FA2620000AC68;
+			remoteInfo = "多线程使用方法";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2A883D71D1FA2620000AC68 /* 多线程使用方法.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "多线程使用方法.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A883DB1D1FA2620000AC68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2A883DD1D1FA2620000AC68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A2A883DE1D1FA2620000AC68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A2A883E01D1FA2620000AC68 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A2A883E11D1FA2620000AC68 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A2A883E41D1FA2620000AC68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2A883E61D1FA2620000AC68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2A883E91D1FA2620000AC68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2A883EB1D1FA2620000AC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A883F01D1FA2630000AC68 /* 多线程使用方法Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "多线程使用方法Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A883F41D1FA2630000AC68 /* _______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______Tests.m"; sourceTree = "<group>"; };
+		A2A883F61D1FA2630000AC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A883FB1D1FA2630000AC68 /* 多线程使用方法UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "多线程使用方法UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A883FF1D1FA2630000AC68 /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
+		A2A884011D1FA2630000AC68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A8840D1D1FA2AF0000AC68 /* NSThredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThredViewController.h; sourceTree = "<group>"; };
+		A2A8840E1D1FA2AF0000AC68 /* NSThredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThredViewController.m; sourceTree = "<group>"; };
+		A2A884121D1FA3330000AC68 /* GCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		A2A884131D1FA3330000AC68 /* GCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		A2A884161D1FA3650000AC68 /* NSOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOperationViewController.h; sourceTree = "<group>"; };
+		A2A884171D1FA3650000AC68 /* NSOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOperationViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2A883D41D1FA2620000AC68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A883ED1D1FA2630000AC68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A883F81D1FA2630000AC68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2A883CE1D1FA2620000AC68 = {
+			isa = PBXGroup;
+			children = (
+				A2A883D91D1FA2620000AC68 /* 多线程使用方法 */,
+				A2A883F31D1FA2630000AC68 /* 多线程使用方法Tests */,
+				A2A883FE1D1FA2630000AC68 /* 多线程使用方法UITests */,
+				A2A883D81D1FA2620000AC68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2A883D81D1FA2620000AC68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2A883D71D1FA2620000AC68 /* 多线程使用方法.app */,
+				A2A883F01D1FA2630000AC68 /* 多线程使用方法Tests.xctest */,
+				A2A883FB1D1FA2630000AC68 /* 多线程使用方法UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2A883D91D1FA2620000AC68 /* 多线程使用方法 */ = {
+			isa = PBXGroup;
+			children = (
+				A2A883DD1D1FA2620000AC68 /* AppDelegate.h */,
+				A2A883DE1D1FA2620000AC68 /* AppDelegate.m */,
+				A2A883E01D1FA2620000AC68 /* ViewController.h */,
+				A2A883E11D1FA2620000AC68 /* ViewController.m */,
+				A2A884151D1FA3530000AC68 /* NSOperation */,
+				A2A884111D1FA3250000AC68 /* GCD */,
+				A2A884101D1FA2B40000AC68 /* NSThread */,
+				A2A883E31D1FA2620000AC68 /* Main.storyboard */,
+				A2A883E61D1FA2620000AC68 /* Assets.xcassets */,
+				A2A883E81D1FA2620000AC68 /* LaunchScreen.storyboard */,
+				A2A883EB1D1FA2620000AC68 /* Info.plist */,
+				A2A883DA1D1FA2620000AC68 /* Supporting Files */,
+			);
+			path = "多线程使用方法";
+			sourceTree = "<group>";
+		};
+		A2A883DA1D1FA2620000AC68 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2A883DB1D1FA2620000AC68 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2A883F31D1FA2630000AC68 /* 多线程使用方法Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A2A883F41D1FA2630000AC68 /* _______Tests.m */,
+				A2A883F61D1FA2630000AC68 /* Info.plist */,
+			);
+			path = "多线程使用方法Tests";
+			sourceTree = "<group>";
+		};
+		A2A883FE1D1FA2630000AC68 /* 多线程使用方法UITests */ = {
+			isa = PBXGroup;
+			children = (
+				A2A883FF1D1FA2630000AC68 /* _______UITests.m */,
+				A2A884011D1FA2630000AC68 /* Info.plist */,
+			);
+			path = "多线程使用方法UITests";
+			sourceTree = "<group>";
+		};
+		A2A884101D1FA2B40000AC68 /* NSThread */ = {
+			isa = PBXGroup;
+			children = (
+				A2A8840D1D1FA2AF0000AC68 /* NSThredViewController.h */,
+				A2A8840E1D1FA2AF0000AC68 /* NSThredViewController.m */,
+			);
+			name = NSThread;
+			sourceTree = "<group>";
+		};
+		A2A884111D1FA3250000AC68 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				A2A884121D1FA3330000AC68 /* GCDViewController.h */,
+				A2A884131D1FA3330000AC68 /* GCDViewController.m */,
+			);
+			name = GCD;
+			sourceTree = "<group>";
+		};
+		A2A884151D1FA3530000AC68 /* NSOperation */ = {
+			isa = PBXGroup;
+			children = (
+				A2A884161D1FA3650000AC68 /* NSOperationViewController.h */,
+				A2A884171D1FA3650000AC68 /* NSOperationViewController.m */,
+			);
+			name = NSOperation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2A883D61D1FA2620000AC68 /* 多线程使用方法 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2A884041D1FA2630000AC68 /* Build configuration list for PBXNativeTarget "多线程使用方法" */;
+			buildPhases = (
+				A2A883D31D1FA2620000AC68 /* Sources */,
+				A2A883D41D1FA2620000AC68 /* Frameworks */,
+				A2A883D51D1FA2620000AC68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "多线程使用方法";
+			productName = "多线程使用方法";
+			productReference = A2A883D71D1FA2620000AC68 /* 多线程使用方法.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2A883EF1D1FA2630000AC68 /* 多线程使用方法Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2A884071D1FA2630000AC68 /* Build configuration list for PBXNativeTarget "多线程使用方法Tests" */;
+			buildPhases = (
+				A2A883EC1D1FA2630000AC68 /* Sources */,
+				A2A883ED1D1FA2630000AC68 /* Frameworks */,
+				A2A883EE1D1FA2630000AC68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2A883F21D1FA2630000AC68 /* PBXTargetDependency */,
+			);
+			name = "多线程使用方法Tests";
+			productName = "多线程使用方法Tests";
+			productReference = A2A883F01D1FA2630000AC68 /* 多线程使用方法Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2A883FA1D1FA2630000AC68 /* 多线程使用方法UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2A8840A1D1FA2630000AC68 /* Build configuration list for PBXNativeTarget "多线程使用方法UITests" */;
+			buildPhases = (
+				A2A883F71D1FA2630000AC68 /* Sources */,
+				A2A883F81D1FA2630000AC68 /* Frameworks */,
+				A2A883F91D1FA2630000AC68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2A883FD1D1FA2630000AC68 /* PBXTargetDependency */,
+			);
+			name = "多线程使用方法UITests";
+			productName = "多线程使用方法UITests";
+			productReference = A2A883FB1D1FA2630000AC68 /* 多线程使用方法UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2A883CF1D1FA2620000AC68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "龙少";
+				TargetAttributes = {
+					A2A883D61D1FA2620000AC68 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4TMTASLZ9D;
+					};
+					A2A883EF1D1FA2630000AC68 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4TMTASLZ9D;
+						TestTargetID = A2A883D61D1FA2620000AC68;
+					};
+					A2A883FA1D1FA2630000AC68 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4TMTASLZ9D;
+						TestTargetID = A2A883D61D1FA2620000AC68;
+					};
+				};
+			};
+			buildConfigurationList = A2A883D21D1FA2620000AC68 /* Build configuration list for PBXProject "多线程使用方法" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2A883CE1D1FA2620000AC68;
+			productRefGroup = A2A883D81D1FA2620000AC68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2A883D61D1FA2620000AC68 /* 多线程使用方法 */,
+				A2A883EF1D1FA2630000AC68 /* 多线程使用方法Tests */,
+				A2A883FA1D1FA2630000AC68 /* 多线程使用方法UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2A883D51D1FA2620000AC68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A883EA1D1FA2620000AC68 /* LaunchScreen.storyboard in Resources */,
+				A2A883E71D1FA2620000AC68 /* Assets.xcassets in Resources */,
+				A2A883E51D1FA2620000AC68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A883EE1D1FA2630000AC68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A883F91D1FA2630000AC68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2A883D31D1FA2620000AC68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A883E21D1FA2620000AC68 /* ViewController.m in Sources */,
+				A2A8840F1D1FA2AF0000AC68 /* NSThredViewController.m in Sources */,
+				A2A883DF1D1FA2620000AC68 /* AppDelegate.m in Sources */,
+				A2A884141D1FA3330000AC68 /* GCDViewController.m in Sources */,
+				A2A883DC1D1FA2620000AC68 /* main.m in Sources */,
+				A2A884181D1FA3650000AC68 /* NSOperationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A883EC1D1FA2630000AC68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A883F51D1FA2630000AC68 /* _______Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A883F71D1FA2630000AC68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A884001D1FA2630000AC68 /* _______UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2A883F21D1FA2630000AC68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2A883D61D1FA2620000AC68 /* 多线程使用方法 */;
+			targetProxy = A2A883F11D1FA2630000AC68 /* PBXContainerItemProxy */;
+		};
+		A2A883FD1D1FA2630000AC68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2A883D61D1FA2620000AC68 /* 多线程使用方法 */;
+			targetProxy = A2A883FC1D1FA2630000AC68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A2A883E31D1FA2620000AC68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2A883E41D1FA2620000AC68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2A883E81D1FA2620000AC68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2A883E91D1FA2620000AC68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2A884021D1FA2630000AC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2A884031D1FA2630000AC68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2A884051D1FA2630000AC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "多线程使用方法/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "longshao.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2A884061D1FA2630000AC68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "多线程使用方法/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "longshao.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A2A884081D1FA2630000AC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "多线程使用方法Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "longshao.-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/多线程使用方法.app/多线程使用方法";
+			};
+			name = Debug;
+		};
+		A2A884091D1FA2630000AC68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "多线程使用方法Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "longshao.-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/多线程使用方法.app/多线程使用方法";
+			};
+			name = Release;
+		};
+		A2A8840B1D1FA2630000AC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "多线程使用方法UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "longshao.-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "多线程使用方法";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A2A8840C1D1FA2630000AC68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "多线程使用方法UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "longshao.-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "多线程使用方法";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2A883D21D1FA2620000AC68 /* Build configuration list for PBXProject "多线程使用方法" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A884021D1FA2630000AC68 /* Debug */,
+				A2A884031D1FA2630000AC68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2A884041D1FA2630000AC68 /* Build configuration list for PBXNativeTarget "多线程使用方法" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A884051D1FA2630000AC68 /* Debug */,
+				A2A884061D1FA2630000AC68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A2A884071D1FA2630000AC68 /* Build configuration list for PBXNativeTarget "多线程使用方法Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A884081D1FA2630000AC68 /* Debug */,
+				A2A884091D1FA2630000AC68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A2A8840A1D1FA2630000AC68 /* Build configuration list for PBXNativeTarget "多线程使用方法UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A8840B1D1FA2630000AC68 /* Debug */,
+				A2A8840C1D1FA2630000AC68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2A883CF1D1FA2620000AC68 /* Project object */;
+}
