@@ -9,7 +9,9 @@
 #import "GCDViewController.h"
 
 @interface GCDViewController ()
-
+{
+     UIImageView *_iconImage;
+}
 @end
 
 @implementation GCDViewController
@@ -17,12 +19,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _iconImage = [[UIImageView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:_iconImage];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self asynvMainQueue];
+    //获取全局并发队列
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    //获取主队列
+    dispatch_queue_t queueMain = dispatch_get_main_queue();
+    
+   dispatch_async(queue, ^{
+       NSString *imgUrl = @"http://img.sootuu.com/vector/200801/072/0337.jpg";
+       UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgUrl]]];
+       
+       //回到主线程设置照片
+       dispatch_async(queueMain, ^{
+           _iconImage.image = image;
+       });
+   });
 }
 
+#warning  ----------  GCD 线程之间的通信
+
+
+#warning  ----------  GCD 使用方法
 //异步 -- 主队列中执行（主队列是串行）
 - (void)asynvMainQueue{
     //获取主队列 （添加到主队列的任务，都会放在主线程中执行）
