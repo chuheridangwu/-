@@ -25,7 +25,14 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self gcdTimeDelay];
+    [self GCDOne];
+}
+#warning  --- GCD 代码只执行一次
+- (void)GCDOne{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSLog(@"改代码只会实行一次");
+    });
 }
 
 #warning  --- GCD 延时调用 不会卡主线程
